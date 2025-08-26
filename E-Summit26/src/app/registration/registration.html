@@ -1,0 +1,63 @@
+<div class="registration-container">
+  <!-- Left Side -->
+  <div class="left-section">
+    <div class="content">
+      <div class="logo">
+        <img src="./icon.png" alt="E-Summit" class="logo-image" />
+      </div>
+
+      <h1>Get started with us</h1>
+      <p>Complete these easy step to register your account</p>
+
+      <div class="steps">
+        <div class="step active">
+          <div class="step-number">1</div>
+          <span>Step number one</span>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <span>Step number two</span>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <span>Step number three</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="right-section">
+    <div class="form-container">
+      <h2>Register</h2>
+      <p class="subtitle">Enter your data to register</p>
+
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" formControlName="firstName" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label for="secondName">Second name</label>
+            <input type="text" id="secondName" formControlName="secondName" placeholder="" />
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" formControlName="email" placeholder="" />
+        </div>
+
+        <div class="form-group full-width">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" placeholder="" />
+        </div>
+
+        <button type="submit" class="register-btn" [disabled]="registrationForm.invalid">
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
